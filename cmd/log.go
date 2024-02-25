@@ -89,7 +89,7 @@ func printMarkdown(l log) error {
 				printMarkdownChange(change)
 			}
 		}
-		fmt.Print("### All Changes\n\n")
+		fmt.Print("\n### All Changes\n\n")
 	} else {
 		fmt.Print("### Changes\n\n")
 	}
