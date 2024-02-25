@@ -10,19 +10,19 @@ import (
 var (
 	Worktree     *git.Worktree
 	Repo         *git.Repository
-	gitInstalled bool
-	gitBin       string
+	GitInstalled bool
+	GitBin       string
 )
 
 func Init() error {
 	var err error
-	gitBin, err = exec.LookPath("git")
-	if err != nil || gitBin == "" {
+	GitBin, err = exec.LookPath("git")
+	if err != nil || GitBin == "" {
 		// git not found
-		gitInstalled = false
+		GitInstalled = false
 	} else {
 		// git found
-		gitInstalled = true
+		GitInstalled = true
 	}
 
 	opt := git.PlainOpenOptions{DetectDotGit: true, EnableDotGitCommonDir: true}

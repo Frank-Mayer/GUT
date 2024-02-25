@@ -10,7 +10,7 @@ import (
 )
 
 func Commit(message string) error {
-	if gitInstalled {
+	if GitInstalled {
 		return cliCommit(message)
 	} else {
 		return goCommit(message)
@@ -18,7 +18,7 @@ func Commit(message string) error {
 }
 
 func cliCommit(message string) error {
-	cmd := exec.Command(gitBin, "commit", "-m", message)
+	cmd := exec.Command(GitBin, "commit", "-m", message)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	cmd.Stdin = os.Stdin

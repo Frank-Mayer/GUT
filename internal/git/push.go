@@ -9,7 +9,7 @@ import (
 )
 
 func Push() error {
-	if gitInstalled {
+	if GitInstalled {
 		return cliPush()
 	} else {
 		return goPush()
@@ -17,7 +17,7 @@ func Push() error {
 }
 
 func cliPush() error {
-	cmd := exec.Command(gitBin, "push")
+	cmd := exec.Command(GitBin, "push")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	cmd.Stdin = os.Stdin
