@@ -56,7 +56,7 @@ func SemverStatus() (*semver.Version, []*semver.Change, error) {
 		if tag, ok := tags[hash]; ok {
 			latestTag, err = semver.ParseVersion(tag)
 			if err != nil {
-				return errors.Join(fmt.Errorf("could not parse tag %q", tag), err)
+				return nil
 			}
 			return storer.ErrStop
 		}
