@@ -8,6 +8,7 @@ import (
 	"github.com/go-git/go-git/v5"
 	"github.com/go-git/go-git/v5/plumbing"
 	"github.com/go-git/go-git/v5/plumbing/object"
+	"github.com/go-git/go-git/v5/plumbing/storer"
 )
 
 func SemverStatus() (*semver.Version, []*semver.Change, error) {
@@ -57,7 +58,7 @@ func SemverStatus() (*semver.Version, []*semver.Change, error) {
 			if err != nil {
 				return errors.Join(fmt.Errorf("could not parse tag %q", tag), err)
 			}
-			return nil
+			return storer.ErrStop
 		}
 
 		// store changes
