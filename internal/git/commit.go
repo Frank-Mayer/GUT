@@ -4,12 +4,18 @@ import (
 	"errors"
 	"os"
 	"os/exec"
-
-	"github.com/Frank-Mayer/gut/internal/config"
-	"github.com/go-git/go-git/v5"
 )
 
 func Commit(message string) error {
+	// check if there are any staged files
+	status, err := Worktree.Status()
+	if err != nil {
+		return errors.Join(errors.New("failed to get status"), err)
+	}
+	if status.IsClean() {
+		return errors.New("no local changes to commit")
+	}
+
 	if GitInstalled {
 		return cliCommit(message)
 	} else {
@@ -29,7 +35,7 @@ func cliCommit(message string) error {
 }
 
 func goCommit(message string) error {
-	if _, err := Worktree.Commit(message, &git.CommitOptions{AllowEmptyCommits: config.Force}); err != nil {
+	if _, err := Worktree.Commit(message, nil); err != nil {
 		return errors.Join(errors.New("failed to commit"), err)
 	}
 
