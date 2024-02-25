@@ -4,9 +4,6 @@ import (
 	"errors"
 	"os"
 	"os/exec"
-
-	"github.com/Frank-Mayer/gut/internal/config"
-	"github.com/go-git/go-git/v5"
 )
 
 func Commit(message string) error {
@@ -29,7 +26,7 @@ func cliCommit(message string) error {
 }
 
 func goCommit(message string) error {
-	if _, err := Worktree.Commit(message, &git.CommitOptions{AllowEmptyCommits: config.Force}); err != nil {
+	if _, err := Worktree.Commit(message, nil); err != nil {
 		return errors.Join(errors.New("failed to commit"), err)
 	}
 

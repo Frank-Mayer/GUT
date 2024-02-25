@@ -3,7 +3,6 @@ package cmd
 import (
 	"os"
 
-	"github.com/Frank-Mayer/gut/internal/config"
 	"github.com/spf13/cobra"
 )
 
@@ -22,5 +21,4 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.PersistentFlags().BoolVarP(&config.Force, "force", "f", false, "force the action")
 }
