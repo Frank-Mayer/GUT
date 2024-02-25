@@ -1,0 +1,26 @@
+package cmd
+
+import (
+	"os"
+
+	"github.com/Frank-Mayer/gut/internal/config"
+	"github.com/spf13/cobra"
+)
+
+// rootCmd represents the base command when called without any subcommands
+var rootCmd = &cobra.Command{
+	Use:   "gut",
+	Short: "Git UI Tool",
+	Long:  `Git simplifies the process of working with Git repositories.`,
+}
+
+func Execute() {
+	err := rootCmd.Execute()
+	if err != nil {
+		os.Exit(1)
+	}
+}
+
+func init() {
+	rootCmd.PersistentFlags().BoolVarP(&config.Force, "force", "f", false, "force the action")
+}
