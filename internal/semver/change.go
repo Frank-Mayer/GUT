@@ -70,7 +70,7 @@ func ChangeFromCommitMessage(message string) *Change {
 	}
 
 	c.Scope = cScope
-	c.Description = cDescription
+	c.Description = strings.TrimSpace(cDescription)
 	c.Body = strings.TrimSpace(strings.Join(lines[1:], "\n"))
 
 	if cBreaking == "!" {

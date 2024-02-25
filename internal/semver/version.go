@@ -81,3 +81,19 @@ func (v *Version) Compare(other *Version) int {
 func (v *Version) Equals(other *Version) bool {
 	return v.Compare(other) == 0
 }
+
+// Bump edits the version in place and returns a pointer to itself.
+func (v *Version) Bump(bump BumpType) *Version {
+	switch bump {
+	case MajorBump:
+		v.Major++
+		v.Minor = 0
+		v.Patch = 0
+	case MinorBump:
+		v.Minor++
+		v.Patch = 0
+	case PatchBump:
+		v.Patch++
+	}
+	return v
+}
