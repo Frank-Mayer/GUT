@@ -36,14 +36,5 @@ func Init() error {
 		return errors.Join(errors.New("failed to get worktree"), err)
 	}
 
-	// check if there are any staged files
-	status, err := Worktree.Status()
-	if err != nil {
-		return errors.Join(errors.New("failed to get status"), err)
-	}
-	if status.IsClean() {
-		return errors.New("no local changes to commit")
-	}
-
 	return nil
 }
