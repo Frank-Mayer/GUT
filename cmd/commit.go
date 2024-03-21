@@ -32,9 +32,8 @@ You need to stage the changes before running this command.`,
 			} else {
 				// check for staged files
 				hasStagedFiles := false
-				for file, status := range s {
+				for _, status := range s {
 					if status.Staging == gogit.Modified || status.Staging == gogit.Added || status.Staging == gogit.Deleted || status.Staging == gogit.Renamed || status.Staging == gogit.Copied || status.Staging == gogit.UpdatedButUnmerged {
-						fmt.Printf("Staged file: %s\n", file)
 						hasStagedFiles = true
 						break
 					}
