@@ -2,7 +2,6 @@ package cmd
 
 import (
 	"errors"
-	"fmt"
 
 	"github.com/Frank-Mayer/gut/internal/git"
 	"github.com/Frank-Mayer/gut/internal/input"
