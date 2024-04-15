@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/Frank-Mayer/gut/internal/git"
+	"github.com/tsukinoko-kun/gut/internal/git"
 	"github.com/charmbracelet/huh"
 	gogit "github.com/go-git/go-git/v5"
 	"github.com/spf13/cobra"

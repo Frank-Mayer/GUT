@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Frank-Mayer/gut/cmd"
+	"github.com/tsukinoko-kun/gut/cmd"
 )
 
 func main() {

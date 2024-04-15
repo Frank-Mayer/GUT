@@ -7,14 +7,14 @@
 Using Go
 
 ```bash
-go install github.com/Frank-Mayer/gut@latest
+go install github.com/tsukinoko-kun/gut@latest
 ```
 
 Using Homebrew
 
 ```bash
-brew tap Frank-Mayer/tap
-brew install Frank-Mayer/tap/gut
+brew tap tsukinoko-kun/tap
+brew install tsukinoko-kun/tap/gut
 ```
 
 ## Preview on YouTube

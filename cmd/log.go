@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Frank-Mayer/gut/internal/git"
-	"github.com/Frank-Mayer/gut/internal/semver"
+	"github.com/tsukinoko-kun/gut/internal/git"
+	"github.com/tsukinoko-kun/gut/internal/semver"
 	"github.com/spf13/cobra"
 )
 

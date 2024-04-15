@@ -3,7 +3,7 @@ package semver_test
 import (
 	"testing"
 
-	"github.com/Frank-Mayer/gut/internal/semver"
+	"github.com/tsukinoko-kun/gut/internal/semver"
 )
 
 func TestVersion_Compare(t *testing.T) {

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/Frank-Mayer/gut/internal/git"
+	"github.com/tsukinoko-kun/gut/internal/git"
 	"github.com/spf13/cobra"
 )
 

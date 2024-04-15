@@ -1,4 +1,4 @@
-module github.com/Frank-Mayer/gut
+module github.com/tsukinoko-kun/gut
 
 go 1.22.0
 
