@@ -25,11 +25,11 @@ universal_binaries:
 
 brews:
   - name: gut
-    homepage: https://github.com/Frank-Mayer/gut
+    homepage: https://github.com/tsukinoko-kun/gut
     description: Git UI Tool
     repository:
-      owner: Frank-Mayer
+      owner: tsukinoko-kun
       name: homebrew-tap
     commit_author:
-      name: Frank-Mayer
+      name: tsukinoko-kun
       email: gh@frankmayer.dev
